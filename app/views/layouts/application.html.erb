@@ -8,11 +8,13 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'hello_coffee' %>
+    
   </head>
 
   <body>
-    
+
+
+
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,6 +51,11 @@
                 </form>
             </div>
           </nav>   
+ 
+
+<div id="resultados" class="alert alert-primary" role="alert">
+     <%= @palabrabuscada %>     
+</div>
  
     <%= yield %>
   </body>
