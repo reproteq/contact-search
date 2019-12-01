@@ -4,48 +4,5 @@
 
 <%= link_to 'Back', contacts_path %>
 
-
-<h1>Añadir Contacto</h1>
-<table class="table table-striped" summary="Add Task" >
-    <tr class="header">
-        <th></th>
-        <th>Contenido</th>
-    </tr>
-            <%= form_for(:contact, :url => {:action => 'create', :id => @contact.id}) do |f| %>    
- 
-    <tr>
-            <th>Nombre</th>
-            <td><%= f.text_field(:nombre) %></td>
-    </tr> 
- 
-   <tr>
-            <th>Apellidos</th>
-            <td><%= f.text_field(:apellidos) %></td>
-    </tr>
-    
-        <tr>
-            <th>Calle</th>
-            <td><%= f.text_field(:calle) %></td>
-    </tr>
-        
-     <tr>
-            <th>Poblacion</th>
-            <td><%= f.text_field(:poblacion) %></td>
-    </tr>
-     
-     
-     <tr>
-            <th>Provincia</th>
-            <td><%= f.text_field(:provincia) %></td>
-    </tr>
-     
-     <tr>
-            <th>Pais</th>
-            <td><%= f.text_field(:pais) %></td>
-    </tr>    
-
-</table>
-        <%= submit_tag("Añadir", :class => "btn btn-primary") %>
-        <% end %>
  
          

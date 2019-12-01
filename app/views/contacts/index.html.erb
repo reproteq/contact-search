@@ -28,36 +28,32 @@
         
          <td><%= link_to("Ver", contact, data: { turbolinks: false }, :class => "btn btn-primary") %> </td>
          <td><%= link_to("Editar", edit_contact_path(contact), data: { turbolinks: false }, :class => "btn btn-success") %>  </td>      
-    <td>          
-        <!-- Button trigger modal -->    
-    <button type="button" class="btn btn-danger"  data-method="delete" href="<%= url_for(contact) %>"  data-toggle="modal" data-target="#exampleModal<%= contact.id  %>"> Borrar</button>
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal<%= contact.id  %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Borrar</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              Estas seguro de querer eliminar esto?
-            </div>
-            <div class="modal-footer">
-             <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>    
-             <%= button_to 'Destroy', contact, method: :delete, data: { },:class => "btn btn-primary" %>             
-            </div>
-          </div>
-        </div>
-      </div>
-     </td>
-        
-        
+         <td>          
+             <!-- Button trigger modal -->    
+         <button type="button" class="btn btn-danger"  data-method="delete" href="<%= url_for(contact) %>"  data-toggle="modal" data-target="#exampleModal<%= contact.id  %>"> Borrar</button>
+           <!-- Modal -->
+           <div class="modal fade" id="exampleModal<%= contact.id  %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+             <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <h5 class="modal-title" id="exampleModalLabel">Borrar</h5>
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                   </button>
+                 </div>
+                 <div class="modal-body">
+                   Estas seguro de querer eliminar esto?
+                 </div>
+                 <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>    
+                  <%= button_to 'Destroy', contact, method: :delete, data: { },:class => "btn btn-primary" %>             
+                 </div>
+               </div>
+             </div>
+           </div>
+          </td>  
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
 
