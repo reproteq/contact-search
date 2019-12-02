@@ -1,6 +1,7 @@
-<h1>Editing Contact</h1>
+<h4>Editar Contacto</h4>
 
 <%= render 'form', contact: @contact %>
 
 <%= link_to 'Show', @contact %> |
-<%= link_to 'Back', contacts_path %>
+<%= link_to "Back",({ controller: "contacts", action: "index" })  %>
+ 
