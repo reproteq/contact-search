@@ -1,6 +1,7 @@
+<div align="center">
 <p class="alert alert-primary" role="alert" id="notice"><%= notice %></p>
 <h4>Contactos</h4>
- <p><%= link_to("Añadir contacto", new_contact_path, data: { turbolinks: false } , :class => "btn btn-success" ) %></p>
+ <p><%= link_to("Añadir contacto", new_contact_path, data: { turbolinks: false } , :class => "btn btn-primary" ) %></p>
 
 <i class="fab fa-facebook-f fa-3x mx-2"></i>
 <table class="table table-hover" summary="Contact List">  
@@ -32,13 +33,13 @@
          <td><%= link_to("Editar", edit_contact_path(contact), data: { turbolinks: false }, :class => "btn btn-success btn-block") %>  </td>      
          <td>          
              <!-- Button trigger modal -->    
-         <button type="button" class="btn btn-danger btn-block"  data-method="delete"    data-toggle="modal" data-target="#exampleModal<%= contact.id  %>"> Borrar</button>
+         <button type="button" class="btn btn-danger btn-block"    data-toggle="modal" data-target="#Modal<%= contact.id  %>"> Borrar</button>
            <!-- Modal -->
-           <div class="modal fade" id="exampleModal<%= contact.id  %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+           <div class="modal fade" id="Modal<%= contact.id  %>" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"> 
              <div class="modal-dialog" role="document">
                <div class="modal-content">
                  <div class="modal-header">
-                   <h5 class="modal-title" id="exampleModalLabel">Borrar</h5>
+                   <h5 class="modal-title" id="ModalLabel">Borrar</h5>
                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
                    </button>
@@ -58,4 +59,4 @@
     <% end %>
   </tbody>
 </table>
-
+</div>

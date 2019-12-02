@@ -1,12 +1,8 @@
-<div class="w-25 p-3" style="background-color: #eee;">   
+<div align="center">
+<div class="w-50 p-3" style="background-color: #eee;">   
 <p id="notice"><%= notice %></p>
-<p>
-<button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar Contacto">
-  Editar
-</button>
 
-</p>
-
+ <p><%= link_to("Editar contacto", edit_contact_path, data: {toggle: 'tooltip' ,placement: 'top' , title: 'Editar Contacto' ,turbolinks: false } , :class => "btn btn-primary" ) %></p>
 
 <p>
   <strong>Nombre:</strong>
@@ -40,4 +36,5 @@
 
 <%= link_to 'Editar', edit_contact_path(@contact) %> |
 <%= link_to 'Contactos', contacts_path %>
+</div>
 </div>

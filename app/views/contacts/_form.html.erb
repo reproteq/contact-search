@@ -1,4 +1,4 @@
-<div class="w-25 p-3" style="background-color: #eee;">
+<div class="w-50 p-3" style="background-color: #eee;">  
 <%= form_with(model: contact, local: true,class: "form-group") do |form| %>
   <% if contact.errors.any? %>
     <div class="field form-group" id="error_explanation">
@@ -43,7 +43,7 @@
   </div>
 
   <div class="field form-group">
-    <%= form.submit 'Envia',class:'btn btn-primary'  %>
+    <%= form.submit 'Aceptar',class:'btn btn-primary btn-block'  %>
   </div>
 <% end %>
 </div>
